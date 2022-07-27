@@ -8,6 +8,7 @@
     <meta name="keywords" content="Portfolio website, HTML, CSS , JAVASCRIPT, AVAILABLE FOR HIRE" />
     <meta name="description" content="This is a portfolio website for Sadeed pv. AVAILABLE FOR HIRE!" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
 
@@ -58,9 +59,9 @@
 
     <title>Sadeedpv.com</title>
 </head>
-<body class="bg-[#17171f]">
+<body class="bg-[#17171f] relative">
     <!-- Header -->
-    <header>
+    <header id="header">
         <div class="container mx-auto flex items-center justify-between px-3 py-6">
             <div class="flex items-center ml-6 md:ml-10">
                 <a href="index.html">
@@ -68,18 +69,23 @@
                 </a>
             </div>
             <!-- Hamburger menu -->
-            <div class='flex cursor-pointer justify-between mr-4 h-[1.2rem] w-[1.5rem] flex-col ml-2 group md:ml-7 lg:hidden'>
+            <div class='flex cursor-pointer justify-between mr-4 h-[1.2rem] w-[1.5rem] flex-col ml-2 group md:ml-7 lg:hidden' 
+            id="hamburger"
+            >
                 <div class='border-r-1 h-[2px] bg-gray-400 group-hover:bg-gray-500'></div>
                 <div class='border-r-1 h-[2px] bg-gray-400 group-hover:bg-gray-500'></div>
                 <div class='border-r-1 h-[2px] bg-gray-400 group-hover:bg-gray-500'></div>
             </div>
-            <div class="items-center justify-between w-[50rem] text-lg mr-5 hidden lg:flex ">
+            <div class="items-left justify-between w-[50rem] z-50 text-lg mr-5 flex scale-0 flex-col bg-[#17171f] absolute top-20  lg:flex lg:items-center lg:relative
+             lg:flex-row lg:bg-transparent lg:top-0 lg:scale-100"
+             id="navbar"
+             >
                 <a href="index.html" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Home</a>
                 <a href="about.html" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Blog</a>
                 <a href="#contact" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Contact</a>
                 <a href="#services" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Services</a>
                 <a href="#projects" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Projects</a>
-                <button class="border-none pl-4 pr-4 p-3 ml-8 bg-[#0F62FE] hover:bg-blue-500">Download CV</button>
+                <button class="border-none pl-4 pr-4 p-3 ml-8 bg-[#0F62FE] hover:bg-blue-500 hidden lg:block">Download CV</button>
             </div>
         </div>
     </header>
@@ -90,7 +96,7 @@
     
     <div class="grid grid-cols-9 items-center justify-center align-center">
         <div class="hidden lg:col-span-1 lg:flex flex-col ml-20 -mt-20 gap-8">
-            <div class="rounded-full w-8 h-8 border-gray-700 border-4 bg-transparent"></div>
+            <div class="rounded-full w-8 h-8  bg-[#0F62FE]"></div>
             <div class="rounded-full w-8 h-8 border-gray-700 border-4 bg-transparent"></div>
             <div class="rounded-full w-8 h-8 border-gray-700 border-4 bg-transparent"></div>
             <div class="rounded-full w-8 h-8 border-gray-700 border-4 bg-transparent"></div>
@@ -99,9 +105,9 @@
         <div class="grid col-span-5 items-center ml-8 z-10 relative lg:col-span-4 lg:ml-12">
             <div class="flex flex-col items-center relative">
                 <div class="flex flex-col gap-5 justify-center align-center items-start relative">
-                    <h1 class="text-6xl font-extrabold "> Building</h1>
-                    <h1 class="text-6xl font-extrabold "> Beautifully Crafted</h1>
-                    <h1 class="text-6xl font-extrabold "> Web Experiences.</h1>
+                    <h1 class="text-6xl font-extrabold " id="text1"> Building</h1>
+                    <h1 class="text-6xl font-extrabold " id="text2"> Beautifully Crafted</h1>
+                    <h1 class="text-6xl font-extrabold " id="text3"> Web Experiences.</h1>
                     <button  class="bg-[#0F62FE] hover:bg-blue-700 font-bold py-4 px-4  w-40 mt-14">
                         <a href="about.html">Read more</a>
                      </button>
@@ -109,7 +115,9 @@
 
             </div>
         </div>
-        <div class="col-span-4 mt-5 z-0 flex  items-start w-full h-screen mr-auto lg:col-span-4"><img src="images/hero.png" alt="hero" class="object-cover w-full h-screen z-0  border-gray-700 border-4 py-10 md:border-none"></div>
+        <div class="col-span-4 mt-5 z-0 flex  items-start w-full h-screen mr-auto lg:col-span-4"
+        id="hero-image"        
+        ><img src="images/hero.png" alt="hero" class="object-cover w-full h-screen z-0  border-gray-700 border-4 py-10 md:border-none"></div>
     </div>
 
     <!-- Project section -->
@@ -253,7 +261,7 @@
         <p class="subpara">
             Get in touch with me for any collaborations or just to say hello.
         </p>
-        <div class="mt-20 flex  flex-wrap">
+        <div class="mt-20 flex  flex-wrap gap-20">
 
             <div class="flex flex-col gap-10">
                 <div class="flex flex-col gap-4 mb-1">
@@ -292,6 +300,44 @@
 
         </div>
     </div>
+
     
+    <script type="text/javascript">
+        window.onload = () =>{
+            document.querySelector('#hamburger').addEventListener('click', () => {
+                document.querySelector('#navbar').classList.toggle('scale-100');
+            });
+
+            gsap.from('#text1', {
+                opacity: 0,
+                x: -200,
+                delay: 1,
+                duration: 0.9,
+            })
+            gsap.from('#text2', {
+                opacity: 0,
+                x: -200,
+                delay: 1.2,
+                duration: 0.9,
+            })
+            gsap.from('#text3', {
+                opacity: 0,
+                x: -200,
+                delay: 1.4,
+                duration: 0.9,
+            })
+            gsap.from('#hero-image', {
+                opacity: 0,
+                y: -200,
+                delay: 1.8,
+                duration: 0.9,
+            })
+            gsap.from('#header', {
+                opacity: 0,
+                y: -200,
+                duration: 0.9,
+            })
+        }
+    </script>
 </body>
 </html>
