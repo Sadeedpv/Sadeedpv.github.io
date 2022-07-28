@@ -123,7 +123,7 @@
 
     <!-- Project section -->
     
-    <div class="mt-40 ml-8 font-bold text-3xl md:ml-28" id="projects">
+    <div class="mt-40 ml-8 font-bold text-3xl md:ml-28 opacity-0 " id="projects">
         <h2 class="subhead relative">
             My Projects
         </h2>
@@ -131,19 +131,19 @@
             Here are some of my projects that I enjoyed building for my clients implementing both fron-end and back-end.
         </p>
         <div class="flex flex-wrap ml-1 mr-2 mt-10 items-left justify-left align-center gap-5">
-            <div class="relative group">
+            <div class="relative group translate-x-80 opacity-0 img">
                 <img src="./images/realestate.webp" class="max-w-lg hover:opacity-40"/>            
                 <p class="absolute top-[50%] left-[25%] right-[25%] text-center whitespace-nowrap hidden group-hover:block ">Real Estate Website</p>
             </div>
-            <div class="relative group">
+            <div class="relative group translate-x-80 opacity-0 img ">
                 <img src="./images/ecommerce.webp"  class="max-w-lg hover:opacity-40 " /> 
                 <p class="absolute top-[50%] left-[25%] right-[25%] text-center whitespace-nowrap hidden group-hover:block">E-commerce Website</p>
             </div>
-            <div class="relative group">
+            <div class="relative group translate-x-80 opacity-0 img">
                 <img src="./images/youtube.png"  class="max-w-lg hover:opacity-40 "/> 
                 <p class="absolute top-[50%] left-[25%] right-[25%] text-center whitespace-nowrap hidden group-hover:block">Youtube clone</p>
             </div>
-            <div class="relative group">
+            <div class="relative group translate-x-80 opacity-0 img">
                 <img src="./images/spotify.png"  class="max-w-lg hover:opacity-40" />            
                 <p class="absolute top-[50%] left-[25%] right-[25%] text-center whitespace-nowrap hidden group-hover:block">spotify clone</p>
             </div>
@@ -153,7 +153,7 @@
 
     <!-- Skills -->
 
-    <div class="mt-40 ml-8 font-bold text-3xl md:ml-28" id="skills">
+    <div class="mt-40 ml-8 font-bold text-3xl opacity-0 md:ml-28" id="skills">
         <h2 class="subhead relative">
             Skills
         </h2>
@@ -172,7 +172,7 @@
 
     <!-- Services -->
     
-    <div class="mt-40 ml-8 font-bold text-3xl md:ml-28" id="services">
+    <div class="mt-40 ml-8 font-bold text-3xl opacity-0 -translate-x-80 md:ml-28" id="services">
         <h2 class="subhead relative">
             Services
         </h2>
@@ -256,7 +256,7 @@
     </div>
     <!-- Hire Me -->
     
-    <div class="mt-40 ml-8 font-bold text-3xl md:ml-28" id="contact">
+    <div class="mt-40 ml-8 font-bold text-3xl opacity-0 translate-x-80 md:ml-28 mb-10" id="contact">
         <h2 class="subhead relative">
             Hire Me
         </h2>
@@ -276,7 +276,7 @@
                 </div>
                 <div class="flex flex-col gap-4 mb-1">
                     <label for="message" class="text-white font-bold text-[1.5rem]">Message</label>
-                    <textarea class="border-2 border-none rounded-lg p-2 pl-3 w-full bg-gray-700 h-72 items-left justify-start" id="message">
+                    <input class="border-2 border-none rounded-lg p-2 pl-3 w-full bg-gray-700 h-72 items-left justify-start" id="message">
                 </div>
                 <button  class="bg-[#0F62FE] hover:bg-blue-700 font-bold px-1 py-1 w-28  text-[1.2rem]">
                     Submit
@@ -340,6 +340,74 @@
                 y: -200,
                 duration: 0.9,
             })
+        }
+
+        function inView(item){
+            if (item.getBoundingClientRect().top < window.innerHeight || item.getBoundingClientRect().top < window.innerHeight) {
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        window.onscroll = () =>{
+            let el = document.querySelector('#projects');
+            let skills = document.querySelector('#skills');
+            let services = document.querySelector('#services');
+            let contact = document.querySelector('#contact');
+
+            // Projects
+
+            if (inView(el)){
+                gsap.to('#projects', {
+                    opacity: 1,
+                    duration: 1.2,
+                    delay:0.4,
+                })
+                let img = document.querySelectorAll('.img');
+                let x = 1;
+                img.forEach(element => {
+                    gsap.to(element, {
+                        opacity: 1,
+                        x: 0,
+                        duration: 0.9,
+                        delay:x,
+                    })
+                    x = x + 0.2
+                });
+            }
+
+            // Skills
+
+            if (inView(skills)){
+                gsap.to('#skills', {
+                    opacity: 1,
+                    duration: 1.2,
+                    delay:0.4,
+                })
+            }
+
+            // Services
+
+            if (inView(services)){
+                gsap.to('#services', {
+                    opacity: 1,
+                    duration: 1.2,
+                    delay:0.4,
+                    x:0
+                })
+            }
+
+            // Contact or Hire me
+            if (inView(contact)){
+                gsap.to('#contact', {
+                    opacity: 1,
+                    duration: 1.2,
+                    delay:0.4,
+                    x:0
+                })
+            }
+
         }
     </script>
 </body>
