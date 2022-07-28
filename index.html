@@ -61,7 +61,7 @@
 </head>
 <body class="bg-[#17171f] relative">
     <!-- Header -->
-    <header id="header">
+    <header id="header z-50">
         <div class="container mx-auto flex items-center justify-between px-3 py-6">
             <div class="flex items-center ml-6 md:ml-10">
                 <a href="index.html">
@@ -76,8 +76,9 @@
                 <div class='border-r-1 h-[2px] bg-gray-400 group-hover:bg-gray-500'></div>
                 <div class='border-r-1 h-[2px] bg-gray-400 group-hover:bg-gray-500'></div>
             </div>
-            <div class="items-left justify-between w-[50rem] z-50 text-lg mr-5 flex scale-0 flex-col bg-[#17171f] absolute top-20  lg:flex lg:items-center lg:relative
-             lg:flex-row lg:bg-transparent lg:top-0 lg:scale-100"
+            <div class="items-left justify-between w-[50rem] z-50 text-lg mr-5 flex scale-y-0 flex-col bg-[#17171f] absolute transition ease-in-out delay-150 duration-300 origin-top
+             top-20  lg:flex lg:items-center lg:relative
+             lg:flex-row lg:bg-transparent lg:top-0 lg:scale-y-100"
              id="navbar"
              >
                 <a href="index.html" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Home</a>
@@ -94,7 +95,7 @@
 
     <!-- Hero section -->
     
-    <div class="grid grid-cols-9 items-center justify-center align-center">
+    <div class="grid grid-cols-9 items-center justify-center align-center z-0 ">
         <div class="hidden lg:col-span-1 lg:flex flex-col ml-20 -mt-20 gap-8">
             <div class="rounded-full w-8 h-8  bg-[#0F62FE]"></div>
             <div class="rounded-full w-8 h-8 border-gray-700 border-4 bg-transparent"></div>
@@ -117,7 +118,7 @@
         </div>
         <div class="col-span-4 mt-5 z-0 flex  items-start w-full h-screen mr-auto lg:col-span-4"
         id="hero-image"        
-        ><img src="images/hero.png" alt="hero" class="object-cover w-full h-screen z-0  border-gray-700 border-4 py-10 md:border-none"></div>
+        ><img src="images/hero.png" alt="hero" class="object-cover w-full h-screen border-gray-700 border-4 py-10 md:border-none"></div>
     </div>
 
     <!-- Project section -->
@@ -191,8 +192,8 @@
                         Apple, inc.
                     </div>
                     <div class="flex gap-5 mb-8 items-center justify-center lg:justify-start">
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem]  w-40 font-normal">UI/UX Designer</button>
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem] w-40 font-normal">Web dev</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem]  max-w-40 font-normal ">UI/UX Designer</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem] max-w-40 font-normal">Web dev</button>
                     </div>
                     <div class="flex items-center justify-center text-center lg:text-left items-left lg:justify-left">
                         <p class="font-normal text-[1.3rem] text-[#9191a4]  leading-6 max-w-[30em]">
@@ -215,8 +216,8 @@
                         Apple, inc.
                     </div>
                     <div class="flex gap-5 mb-8 items-center justify-center lg:justify-start">
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem]  w-40 font-normal">UI/UX Designer</button>
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem] w-40 font-normal">Web dev</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem]  max-w-40 font-normal ">UI/UX Designer</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem] max-w-40 font-normal">Web dev</button>
                     </div>
                     <div class="flex items-center justify-center text-center lg:text-left items-left lg:justify-left">
                         <p class="font-normal text-[1.3rem] text-[#9191a4]  leading-6 max-w-[30em]">
@@ -227,7 +228,7 @@
             </div>
         </div>
         <!-- Service Items -->
-        <div class=" flex w-3/4 ml-10 mr-10 border-gray-500 border-solid border-2 mt-12 items-center justify-center p-28">
+        <div class=" flex w-3/4 ml-10 mr-10 border-gray-500 border-solid border-2 mt-12 items-center justify-center p-20">
 
             <div class="flex flex-col gap-24 items-center justify-center lg:flex-row  lg:justify-between">
                 <div class="mb-4">
@@ -239,8 +240,8 @@
                         Apple, inc.
                     </div>
                     <div class="flex gap-5 mb-8 items-center justify-center lg:justify-start">
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem]  w-40 font-normal">UI/UX Designer</button>
-                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1.2rem] w-40 font-normal">Web dev</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem]  max-w-40 font-normal ">UI/UX Designer</button>
+                        <button class="border-none bg-gray-600 pl-2 pr-2 p-1 rounded-[5px] text-[1rem] max-w-40 font-normal">Web dev</button>
                     </div>
                     <div class="flex items-center justify-center text-center lg:text-left items-left lg:justify-left">
                         <p class="font-normal text-[1.3rem] text-[#9191a4]  leading-6 max-w-[30em]">
@@ -250,6 +251,7 @@
                 </div>
             </div>
         </div>
+
 
     </div>
     <!-- Hire Me -->
@@ -274,7 +276,7 @@
                 </div>
                 <div class="flex flex-col gap-4 mb-1">
                     <label for="message" class="text-white font-bold text-[1.5rem]">Message</label>
-                    <input class="border-2 border-none rounded-lg p-2 pl-3 w-full bg-gray-700 h-72 items-left justify-start" id="message">
+                    <textarea class="border-2 border-none rounded-lg p-2 pl-3 w-full bg-gray-700 h-72 items-left justify-start" id="message">
                 </div>
                 <button  class="bg-[#0F62FE] hover:bg-blue-700 font-bold px-1 py-1 w-28  text-[1.2rem]">
                     Submit
@@ -305,7 +307,8 @@
     <script type="text/javascript">
         window.onload = () =>{
             document.querySelector('#hamburger').addEventListener('click', () => {
-                document.querySelector('#navbar').classList.toggle('scale-100');
+                document.querySelector('#navbar').classList.toggle('scale-y-100');
+                document.querySelector('#navbar').classList.toggle('bg-black');
             });
 
             gsap.from('#text1', {
