@@ -7,6 +7,7 @@
     <meta name="author" content="Sadeed pv" />
     <meta name="keywords" content="Portfolio website, HTML, CSS , JAVASCRIPT, AVAILABLE FOR HIRE" />
     <meta name="description" content="This is a portfolio website for Sadeed pv. AVAILABLE FOR HIRE!" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
@@ -81,11 +82,11 @@
              lg:flex-row lg:bg-transparent lg:top-0 lg:scale-y-100"
              id="navbar"
              >
-                <a href="index.html" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Home</a>
-                <a href="about.html" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Blog</a>
-                <a href="#contact" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Contact</a>
-                <a href="#services" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Services</a>
-                <a href="#projects" class="px-3 py-2 hover:text-[#0F62FE] active:text-[#0F62FE]">Projects</a>
+                <a href="index.html" class="px-4 py-2 hover:text-[#0F62FE] active:text-[#0F62FE] lg:px-3">Home</a>
+                <a href="about.html" class="px-4 py-2 hover:text-[#0F62FE] active:text-[#0F62FE] lg:px-3">Blog</a>
+                <a href="#contact" class="px-4 py-2 hover:text-[#0F62FE] active:text-[#0F62FE] lg:px-3">Contact</a>
+                <a href="#services" class="px-4 py-2 hover:text-[#0F62FE] active:text-[#0F62FE] lg:px-3">Services</a>
+                <a href="#projects" class="px-4 py-2 hover:text-[#0F62FE] active:text-[#0F62FE] lg:px-3">Projects</a>
                 <button class="border-none pl-4 pr-4 p-3 ml-8 bg-[#0F62FE] hover:bg-blue-500 hidden lg:block">Download CV</button>
             </div>
         </div>
@@ -361,11 +362,11 @@
             if (inView(el)){
                 gsap.to('#projects', {
                     opacity: 1,
-                    duration: 1.2,
+                    duration: 0.9,
                     delay:0.4,
                 })
                 let img = document.querySelectorAll('.img');
-                let x = 1;
+                let x = 0.8;
                 img.forEach(element => {
                     gsap.to(element, {
                         opacity: 1,
@@ -382,7 +383,7 @@
             if (inView(skills)){
                 gsap.to('#skills', {
                     opacity: 1,
-                    duration: 1.2,
+                    duration: 0.9,
                     delay:0.4,
                 })
             }
@@ -392,7 +393,7 @@
             if (inView(services)){
                 gsap.to('#services', {
                     opacity: 1,
-                    duration: 1.2,
+                    duration: 0.9,
                     delay:0.4,
                     x:0
                 })
@@ -402,7 +403,7 @@
             if (inView(contact)){
                 gsap.to('#contact', {
                     opacity: 1,
-                    duration: 1.2,
+                    duration:0.9,
                     delay:0.4,
                     x:0
                 })
